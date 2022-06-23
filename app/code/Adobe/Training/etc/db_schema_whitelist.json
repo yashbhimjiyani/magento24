@@ -1,0 +1,13 @@
+{
+    "adobe_training_blogs": {
+        "column": {
+            "id": true,
+            "title": true,
+            "desc": true,
+            "status": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
