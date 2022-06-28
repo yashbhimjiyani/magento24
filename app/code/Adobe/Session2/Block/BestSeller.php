@@ -5,7 +5,7 @@
  *
  * Created By : Yash B
  */
-namespace Adobe\CoreConcepts\Block;
+namespace Adobe\Session2\Block;
 
 use Magento\Catalog\Block\Product\Context;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;

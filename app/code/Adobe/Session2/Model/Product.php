@@ -1,6 +1,6 @@
 <?php
  
-namespace Adobe\CoreConcepts\Model;
+namespace Adobe\Session2\Model;
  
 class Product extends \Magento\Catalog\Model\Product
 {

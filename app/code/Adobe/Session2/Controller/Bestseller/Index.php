@@ -1,6 +1,6 @@
 <?php
 
-namespace Adobe\CoreConcepts\Controller\BestSeller;
+namespace Adobe\Session2\Controller\BestSeller;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\RequestInterface;
@@ -8,7 +8,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Index
- * @package Adobe\CoreConcepts\Controller\BestSeller
+ * @package Adobe\Session2\Controller\BestSeller
  */
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -40,8 +40,8 @@ class Index extends \Magento\Framework\App\Action\Action
         $resultPage = $this->_resultsPageFactory->create();
  
         $block = $resultPage->getLayout()
-                ->createBlock('Adobe\CoreConcepts\Block\BestSeller')
-                ->setTemplate('Adobe_CoreConcepts::bestsellers.phtml')
+                ->createBlock('Adobe\Session2\Block\BestSeller')
+                ->setTemplate('Adobe_Session2::bestsellers.phtml')
                 ->toHtml();
         $this->getResponse()->setBody($block);
     }
