@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Unit5\DataApi\Api\DataRepositoryInterface"
+                type="Unit5\DataApi\Model\Repository"/>
+
+    <preference for="Unit5\DataApi\Api\Data\DataSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults"/>
+    
+    <type name="Magento\Catalog\Model\Category">
+        <plugin name="unit5CategoryAfterLoad" type="Unit5\DataApi\Plugin\AfterCategoryLoad"/>
+    </type>
+</config>

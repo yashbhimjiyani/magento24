@@ -1,0 +1,9 @@
+<?php
+$collection = $block->getProductCollection();
+?>
+<h2>Best Selling Products</h2>
+<?php
+foreach ($collection as $product) 
+{
+    echo 'Product:'.$product->getName() . '<br>' . $product->getProductUrl() . '<br><br>';
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="unit5_category_country" resource="default" engine="innodb" comment="Unit5 Category">
+    <column xsi:type="int" name="catalog_category_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Catalog Category Id"/>
+    <column xsi:type="varchar" name="country" nullable="false" length="32" default="simple" comment="Country"/>
+    <column xsi:type="int" name="category_id" padding="10" unsigned="true" nullable="false" identity="false" comment="Category Id"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="catalog_category_id"/>
+    </constraint>
+    <constraint xsi:type="foreign" referenceId="UNIT5_CTGR_COUNTRY_CTGR_ID_CAT_CTGR_ENTT_ENTT_ID" table="unit5_category_country" column="category_id" referenceTable="catalog_category_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+  </table>
+</schema>

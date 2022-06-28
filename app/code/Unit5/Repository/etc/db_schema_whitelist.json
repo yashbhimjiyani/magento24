@@ -1,0 +1,14 @@
+{
+    "training_repository_example": {
+        "column": {
+            "example_id": true,
+            "name": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "TRAINING_REPOSITORY_EXAMPLE_NAME": true
+        }
+    }
+}
