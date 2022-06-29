@@ -23,14 +23,14 @@ class BestSeller extends Template
         Context $context,
         CollectionFactory $productCollectionFactory,
         StoreManagerInterface $storeManager,
-        BestSellersCollectionFactory $bestSellersCollectionFactory,
+        BestSellersCollectionFactory $bestSellersCollectionFactory
     ) {
         $this->_bestSellersCollectionFactory = $bestSellersCollectionFactory;
         $this->_storeManager = $storeManager;
         $this->_productCollectionFactory = $productCollectionFactory;
         parent::__construct($context);
     }
-   
+
     public function getProductCollection()
     {
         $productIds = [];
