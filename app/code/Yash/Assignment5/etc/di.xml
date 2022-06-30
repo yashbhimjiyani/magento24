@@ -9,8 +9,13 @@
 -->
 <config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- <preference for="Magento\Checkout\Controller\Cart\CouponPost" type="Yash\Assignment5\Controller\Cart\CouponPost" /> -->
+    <!-- <preference for="Magento\Quote\Model\CouponManagement" type="Yash\Assignment5\Model\CouponManagement" /> -->
     <type name="Magento\Checkout\Controller\Cart\CouponPost">
         <plugin name="checkout-cart-couponpost"
                 type="Yash\Assignment5\Plugin\Cart\CouponPost"/>
+    </type>
+    <type name="Magento\Quote\Model\CouponManagement">
+        <plugin name="checkout-page-couponmanagement"
+                type="Yash\Assignment5\Plugin\CouponManagement"/>
     </type>
 </config>
