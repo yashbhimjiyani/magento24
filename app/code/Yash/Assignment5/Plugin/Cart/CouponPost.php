@@ -10,14 +10,14 @@ class CouponPost extends \Magento\Checkout\Controller\Cart\CouponPost
             ? ''
             : trim($this->getRequest()->getParam('coupon_code'));
 
-        if($couponCode){
+        if ($couponCode) {
             $this->messageManager->addErrorMessage(
                 __(
                     'The coupon code "%1" is not valid.',
                     $couponCode
                 )
             );
-        }else{
+        } else {
             $this->messageManager->addErrorMessage(
                 __(
                     'The coupon code "%1" is not valid.',

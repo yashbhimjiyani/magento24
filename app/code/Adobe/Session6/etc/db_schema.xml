@@ -1,0 +1,15 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="candidates_data">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Candidate Id"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Candidate Name"/>
+        <column xsi:type="text" name="address" comment="Address" nullable="false" />
+        <column xsi:type="date" name="dob" comment="Date of Birth" nullable="false" />
+        <column xsi:type="smallint" name="is_active" comment="Is Active" nullable="false" unsigned="true" default="1"/>
+        <column xsi:type="boolean" name="is_indian_citizen" comment="Indian Citizen?" nullable="false" default="true" onCreate="migrateDataFrom(id)"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

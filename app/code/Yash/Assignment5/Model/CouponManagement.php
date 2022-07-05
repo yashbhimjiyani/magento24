@@ -26,17 +26,17 @@ class CouponManagement extends \Magento\Quote\Model\CouponManagement
         }
         $quote->getShippingAddress()->setCollectShippingRates(true);
 
-        try {
-            // $quote->setCouponCode($couponCode);
-            // $this->quoteRepository->save($quote->collectTotals());
-        } catch (LocalizedException $e) {
-            throw new CouldNotSaveException(__('The coupon code couldn\'t be applied: ' .$e->getMessage()), $e);
-        } catch (\Exception $e) {
-            throw new CouldNotSaveException(
-                __("The coupon code couldn't be applied. Verify the coupon code and try again."),
-                $e
-            );
-        }
+//        try {
+//            // $quote->setCouponCode($couponCode);
+//            // $this->quoteRepository->save($quote->collectTotals());
+//        } catch (LocalizedException $e) {
+//            throw new CouldNotSaveException(__('The coupon code couldn\'t be applied: ' .$e->getMessage()), $e);
+//        } catch (\Exception $e) {
+//            throw new CouldNotSaveException(
+//                __("The coupon code couldn't be applied. Verify the coupon code and try again."),
+//                $e
+//            );
+//        }
         if ($quote->getCouponCode() != $couponCode) {
             throw new NoSuchEntityException(__("The coupon code isn't valid. Verify the code and try again."));
         }
