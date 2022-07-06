@@ -34,13 +34,14 @@ class Index extends Action
 
     public function execute()
     {
+        $resultJson = $this->resultJsonFactory->create();
         try {
             //Read a record
-            $candidate = $this->_candidateRepository->getById("1");
-            $resultJson = $this->resultJsonFactory->create();
+            $candidate = $this->_candidateRepository->getById('1');
+            $data=$candidate->getData();
             return $resultJson->setData([
                 'success' => true,
-                'data' => $candidate
+                'data' => $data
             ]);
         } catch (NoSuchEntityException $e) {
             return $resultJson->setData([

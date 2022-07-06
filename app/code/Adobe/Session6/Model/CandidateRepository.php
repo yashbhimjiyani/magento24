@@ -53,6 +53,6 @@ class CandidateRepository implements CandidateRepositoryInterface
         if (!$object->getId()) {
             throw new NoSuchEntityException(__('Object with id "%1" does not exist.', $id));
         }
-        return $object->getData();
+        return $object;
     }
 }
