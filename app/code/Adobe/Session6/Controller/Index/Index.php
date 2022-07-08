@@ -8,11 +8,10 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Adobe\Session6\Api\CandidateRepositoryInterface;
+use Adobe\Session6\Model\CandidateFactory;
 
 class Index extends Action
 {
-    protected $_pageFactory;
-
     protected $_candidateRepository;
 
     /**
@@ -25,10 +24,12 @@ class Index extends Action
     public function __construct(
         Context $context,
         JsonFactory $resultJsonFactory,
-        CandidateRepositoryInterface $candidateRepository
+        CandidateRepositoryInterface $candidateRepository,
+        CandidateFactory $candidateFactory
     ) {
         $this->resultJsonFactory = $resultJsonFactory;
         $this->_candidateRepository = $candidateRepository;
+        $this->candidateFactory = $candidateFactory;
         return parent::__construct($context);
     }
 
@@ -38,7 +39,7 @@ class Index extends Action
         try {
             //Read a record
             $candidate = $this->_candidateRepository->getById('1');
-            $data=$candidate->getData();
+            $data = $candidate->getData();
             return $resultJson->setData([
                 'success' => true,
                 'data' => $data

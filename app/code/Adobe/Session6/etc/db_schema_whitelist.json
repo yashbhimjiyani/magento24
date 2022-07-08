@@ -13,5 +13,22 @@
         "constraint": {
             "PRIMARY": true
         }
+    },
+    "candidates_addresses": {
+        "column": {
+            "address_id": true,
+            "street1": true,
+            "street2": true,
+            "city": true,
+            "state": true,
+            "country": true,
+            "created_at": true,
+            "updated_at": true,
+            "candidate_id": true
+        },
+        "constraint": {
+            "CANDIDATES_ADDRESSES_CANDIDATE_ID_CANDIDATES_DATA_ID": true,
+            "PRIMARY": true
+        }
     }
 }

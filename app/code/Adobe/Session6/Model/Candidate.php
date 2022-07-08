@@ -36,9 +36,9 @@ class Candidate extends AbstractModel implements
     {
         return $this->getData('id');
     }
-    public function setId($car_id)
+    public function setId($id)
     {
-        return $this->setData('id', $car_id);
+        return $this->setData('id', $id);
     }
     public function getName()
     {
