@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Adobe\Session6\Api\Data\CandidateInterface">
+        <attribute code="address_items" type="Adobe\Session6\Api\Data\CandidateAddressInterface[]" />
+    </extension_attributes>
+</config>

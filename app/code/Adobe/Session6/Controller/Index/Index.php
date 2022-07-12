@@ -37,6 +37,8 @@ class Index extends Action
     {
         $resultJson = $this->resultJsonFactory->create();
         try {
+            $collection=$this->_candidateRepository->getById('1');
+            var_dump($collection);die();
             //Read a record
             $candidate = $this->_candidateRepository->getById('1');
             $data = $candidate->getData();
@@ -52,7 +54,7 @@ class Index extends Action
         } catch (LocalizedException $e) {
             return $resultJson->setData([
                 'sucesss' => false,
-                'message' => 'Localized Exception'
+                'message' => $e->getLogMessage()
             ]);
         }
     }

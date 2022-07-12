@@ -12,15 +12,15 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 
 /**
  * Interface CandidateRepositoryInterface
- * @package Adobe\Session6\Api
  */
 interface CandidateRepositoryInterface
 {
     /**
      * Get Candidate by Id
      *
+     * @api
      * @param int $id
-     * @return CandidateInterface
+     * @return Data\CandidateInterface
      * @throws NoSuchEntityException If Candidate with the specified ID does not exist.
      * @throws LocalizedException
      */
@@ -30,7 +30,7 @@ interface CandidateRepositoryInterface
      * Retrieve Candidates which match a specified criteria.
      *
      * @param SearchCriteriaInterface $criteria
-     * 
+     * @return Data\CandidateSearchResultsInterface
      */
     public function getList(SearchCriteriaInterface $criteria);
 
@@ -38,7 +38,7 @@ interface CandidateRepositoryInterface
      * Get Candidates by Ids
      *
      * @param int[] $ids
-     * @return CandidateInterface
+     * @return Data\CandidateInterface
      * @throws NoSuchEntityException If Candidate with the specified ID does not exist.
      * @throws LocalizedException
      */

@@ -96,4 +96,13 @@ class Candidate extends AbstractModel implements
     {
         return $this->setData('updated_at', $updateAt);
     }
+    public function getExtensionAttributes()
+    {
+        return $this->_getExtensionAttributes();
+    }
+
+    public function setExtensionAttributes(\Adobe\Session6\Api\Data\CandidateExtensionInterface $extensionAttributes)
+    {
+        $this->_setExtensionAttributes($extensionAttributes);
+    }
 }

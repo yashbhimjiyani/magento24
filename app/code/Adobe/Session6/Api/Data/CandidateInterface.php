@@ -8,11 +8,12 @@
 
 namespace Adobe\Session6\Api\Data;
 
+use Magento\Framework\Api\ExtensibleDataInterface;
+
 /**
  * Interface CandidateInterface
- * @package Adobe\Session6\Api\Data
  */
-interface CandidateInterface
+interface CandidateInterface extends ExtensibleDataInterface
 {
     /**
      * @param int $id
@@ -53,7 +54,7 @@ interface CandidateInterface
     /**
      * @return string
      */
-    public function getUpdatedAt(); 
+    public function getUpdatedAt();
     /**
      * @param string $updatedAt
      * @return $this
@@ -62,7 +63,7 @@ interface CandidateInterface
     /**
      * @return string
      */
-    public function getDob(); 
+    public function getDob();
     /**
      * @param string $dob
      * @return $this
@@ -71,7 +72,7 @@ interface CandidateInterface
     /**
      * @return string
      */
-    public function getIsActive(); 
+    public function getIsActive();
     /**
      * @param string $isActive
      * @return $this
@@ -80,10 +81,20 @@ interface CandidateInterface
     /**
      * @return string
      */
-    public function getIsIndianCitizen(); 
+    public function getIsIndianCitizen();
     /**
      * @param string $isIndianCitizen
      * @return $this
      */
     public function setIsIndianCitizen($isIndianCitizen);
+    /**
+     * @return \Adobe\Session6\Api\Data\CandidateExtensionInterface|null
+     */
+    public function getExtensionAttributes();
+
+    /**
+     * @param \Adobe\Session6\Api\Data\CandidateExtensionInterface $extensionAttributes
+     * @return void
+     */
+    public function setExtensionAttributes(CandidateExtensionInterface $extensionAttributes);
 }

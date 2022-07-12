@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route method="GET" url="/V1/candidates/:id">
+        <service class="Adobe\Session6\Api\CandidateRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/customer-address-data/:addressId">
+        <service class="Adobe\Session6\Api\CandidateAddressRepositoryInterface" method="getByAddressId"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

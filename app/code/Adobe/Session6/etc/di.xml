@@ -10,4 +10,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Adobe\Session6\Api\CandidateRepositoryInterface" type="Adobe\Session6\Model\CandidateRepository" />
     <preference for="Adobe\Session6\Api\Data\CandidateInterface" type="Adobe\Session6\Model\Candidate" />
+    <preference for="Adobe\Session6\Api\Data\CandidateSearchResultInterface" type="Adobe\Session6\Model\CandidateSearchResult" />
+    <preference for="Adobe\Session6\Api\CandidateAddressRepositoryInterface" type="Adobe\Session6\Model\CandidateAddressRepository" />
+    <preference for="Adobe\Session6\Api\Data\CandidateAddressInterface" type="Adobe\Session6\Model\CandidateAddress" />
+    <type name="Adobe\Session6\Api\CandidateRepositoryInterface">
+        <plugin name="get_addresses_attribute" type="Adobe\Session6\Plugin\CandidateGet"/>
+    </type>
 </config>

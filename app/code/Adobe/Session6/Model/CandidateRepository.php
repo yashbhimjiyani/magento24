@@ -111,14 +111,14 @@ class CandidateRepository implements CandidateRepositoryInterface
      */
     public function getByIds($ids)
     {
-        $objects=array();
+        $objects = array();
         foreach ($ids as $id) {
             $object = $this->candidateFactory->create();
             $this->candidateResourceModel->load($object, $id);
             if (!$object->getId()) {
                 throw new NoSuchEntityException(__('Object with id "%1" does not exist.', $id));
             }
-            array_push($objects,$object);
+            array_push($objects, $object);
         }
         return $objects;
     }

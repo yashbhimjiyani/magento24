@@ -1,9 +1,9 @@
 <?php
 
-namespace Adobe\Session6\Model\ResourceModel\Candidate;
+namespace Adobe\Session6\Model\ResourceModel\CandidateAddress;
 
-use Adobe\Session6\Model\Candidate as Model;
-use Adobe\Session6\Model\ResourceModel\Candidate as ResourceModel;
+use Adobe\Session6\Model\CandidateAddress as Model;
+use Adobe\Session6\Model\ResourceModel\CandidateAddress as ResourceModel;
 
 /**
  * Class Collection
