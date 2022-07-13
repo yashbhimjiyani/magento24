@@ -38,7 +38,7 @@ class Index extends Action
         $resultJson = $this->resultJsonFactory->create();
         try {
             $collection=$this->_candidateRepository->getById('1');
-            var_dump($collection);die();
+            var_dump($collection->getData());die();
             //Read a record
             $candidate = $this->_candidateRepository->getById('1');
             $data = $candidate->getData();

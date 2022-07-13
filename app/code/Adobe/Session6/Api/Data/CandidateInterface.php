@@ -12,6 +12,7 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 
 /**
  * Interface CandidateInterface
+ * @package Adobe\Session6\Api\Data
  */
 interface CandidateInterface extends ExtensibleDataInterface
 {

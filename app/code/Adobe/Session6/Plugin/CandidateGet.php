@@ -21,6 +21,6 @@ class CandidateGet
         $candidateExtension->setAddressItems($attributes);
         // $this->candidateExtensionFactory->setAddressItems($attributes);
         $candidateInterface->setExtensionAttributes($candidateExtension);
-        return $candidateInterface->getData();
+        return $candidateInterface;
     }
 }
