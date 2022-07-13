@@ -16,4 +16,7 @@
     <type name="Adobe\Session6\Api\CandidateRepositoryInterface">
         <plugin name="get_addresses_attribute" type="Adobe\Session6\Plugin\CandidateGet"/>
     </type>
+    <type name="Adobe\Session6\Api\CandidateAddressRepositoryInterface">
+        <plugin name="get_candidates_attribute" type="Adobe\Session6\Plugin\CandidateAddressGet"/>
+    </type>
 </config>

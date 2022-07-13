@@ -2,4 +2,7 @@
     <extension_attributes for="Adobe\Session6\Api\Data\CandidateInterface">
         <attribute code="address_items" type="Adobe\Session6\Api\Data\CandidateAddressInterface[]" />
     </extension_attributes>
+    <extension_attributes for="Adobe\Session6\Api\Data\CandidateAddressInterface">
+        <attribute code="candidate_data" type="Adobe\Session6\Api\Data\CandidateInterface" />
+    </extension_attributes>
 </config>

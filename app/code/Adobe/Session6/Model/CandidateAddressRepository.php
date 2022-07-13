@@ -60,7 +60,7 @@ class CandidateAddressRepository implements CandidateAddressRepositoryInterface
         if (!$object->getAddressId()) {
             throw new NoSuchEntityException(__('Object with Address id "%1" does not exist.', $addressId));
         }
-        return $object->getData();
+        return $object;
     }
 
     /**

@@ -3,14 +3,14 @@
 namespace Adobe\Session6\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
-use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\Model\AbstractExtensibleModel;
 use Adobe\Session6\Api\Data\CandidateAddressInterface;
 use Adobe\Session6\Model\ResourceModel\CandidateAddress as ResourceModel;
 
 /**
  * Class CandidateAddress
  */
-class CandidateAddress extends AbstractModel implements
+class CandidateAddress extends AbstractExtensibleModel implements
     CandidateAddressInterface,
     IdentityInterface
 {
@@ -111,6 +111,6 @@ class CandidateAddress extends AbstractModel implements
 
     public function setExtensionAttributes(\Adobe\Session6\Api\Data\CandidateAddressExtensionInterface $extensionAttributes)
     {
-$this->_setExtensionAttributes($extensionAttributes);
+        $this->_setExtensionAttributes($extensionAttributes);
     }
 }
