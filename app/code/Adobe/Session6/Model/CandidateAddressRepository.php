@@ -69,10 +69,8 @@ class CandidateAddressRepository implements CandidateAddressRepositoryInterface
     public function getByCandidateId($candidateId)
     {
         $object=$this->candidateAddressFactory->create();
-        $this->candidateAddressResourceModel->load($object,$candidateId,'candidate_id');
-        if(!$object->getCandidateId()){
-            throw new NoSuchEntityException(__('Object with Address id "%1" does not exist.', $candidateId));
-        }
-        return $object->getData();
+        $collection=$object->getCollection();
+        $collection->addFieldToFilter('candidate_id',$candidateId);
+        return $collection->getData();
     }
 }

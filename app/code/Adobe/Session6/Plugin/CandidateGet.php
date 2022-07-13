@@ -18,9 +18,9 @@ class CandidateGet
         $attributes=$this->candidateAddressRepository->getByCandidateId($candidateInterface->getId());
         $extensionAttributes=$candidateInterface->getExtensionAttributes();
         $candidateExtension=$extensionAttributes ? $extensionAttributes : $this->candidateExtensionFactory->create();
-        $candidateExtension->setExtensionAttributes($attributes);
+        $candidateExtension->setAddressItems($attributes);
         // $this->candidateExtensionFactory->setAddressItems($attributes);
         $candidateInterface->setExtensionAttributes($candidateExtension);
-        return $candidateInterface;
+        return $candidateInterface->getData();
     }
 }

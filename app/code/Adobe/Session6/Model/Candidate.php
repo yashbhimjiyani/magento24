@@ -3,14 +3,14 @@
 namespace Adobe\Session6\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
-use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\Model\AbstractExtensibleModel;
 use Adobe\Session6\Api\Data\CandidateInterface;
 use Adobe\Session6\Model\ResourceModel\Candidate as ResourceModel;
 
 /**
  * Class Candidate
  */
-class Candidate extends AbstractModel implements
+class Candidate extends AbstractExtensibleModel implements
     CandidateInterface,
     IdentityInterface
 {
