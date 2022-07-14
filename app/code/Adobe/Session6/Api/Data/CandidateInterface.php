@@ -37,15 +37,6 @@ interface CandidateInterface extends ExtensibleDataInterface
     /**
      * @return string
      */
-    public function getAddress();
-    /**
-     * @param string $address
-     * @return $this
-     */
-    public function setAddress($address);
-    /**
-     * @return string
-     */
     public function getCreatedAt();
     /**
      * @param string $createdAt

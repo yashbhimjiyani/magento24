@@ -48,14 +48,6 @@ class Candidate extends AbstractExtensibleModel implements
     {
         return $this->setData('name', $name);
     }
-    public function getAddress()
-    {
-        return $this->getData('address');
-    }
-    public function setAddress($address)
-    {
-        return $this->setData('address', $address);
-    }
     public function getDob()
     {
         return $this->getData('dob');

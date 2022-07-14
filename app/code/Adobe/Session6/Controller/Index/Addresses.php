@@ -37,7 +37,7 @@ class Addresses extends Action
     public function execute()
     {
         $resultJson = $this->resultJsonFactory->create();
-        $collection=$this->candidateAddressRepositoryInterface->getByAddressId('1');
+        $collection=$this->candidateAddressRepositoryInterface->getByAddressId(1);
         var_dump($collection);die();
         // $this->collection->getSelect()->join(
         //     ['secondTable' => $this->collection->getTable('candidates_addresses')],

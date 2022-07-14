@@ -4,13 +4,13 @@
     <route method="GET" url="/V1/candidates/:id">
         <service class="Adobe\Session6\Api\CandidateRepositoryInterface" method="getById"/>
         <resources>
-            <resource ref="anonymous"/>
+            <resource ref="candidates_get"/>
         </resources>
     </route>
     <route method="GET" url="/V1/customer-address-data/:addressId">
         <service class="Adobe\Session6\Api\CandidateAddressRepositoryInterface" method="getByAddressId"/>
         <resources>
-            <resource ref="anonymous"/>
+            <resource ref="Adobe_Session6::candidates_addresses_get"/>
         </resources>
     </route>
 </routes>
