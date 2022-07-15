@@ -9,6 +9,7 @@
 namespace Adobe\Session6\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
+use Magento\Framework\Api\SearchResultsInterface;
 
 /**
  * Interface CandidateRepositoryInterface
@@ -30,7 +31,7 @@ interface CandidateRepositoryInterface
      * Retrieve Candidates which match a specified criteria.
      *
      * @param SearchCriteriaInterface $criteria
-     * @return Data\CandidateSearchResultsInterface
+     * @return SearchResultsInterface
      */
     public function getList(SearchCriteriaInterface $criteria);
 

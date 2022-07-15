@@ -8,6 +8,9 @@
 
 namespace Adobe\Session6\Api;
 
+use Magento\Framework\Api\SearchCriteriaInterface;
+use Magento\Framework\Api\SearchResultsInterface;
+
 /**
  * Interface CandidateAddressRepositoryInterface
  */
@@ -40,4 +43,11 @@ interface CandidateAddressRepositoryInterface
      * @throws LocalizedException
      */
     public function getByCandidateId($candidateId);
+    /**
+     * Retrieve Candidates Addresses which match a specified criteria.
+     *
+     * @param SearchCriteriaInterface $criteria
+     * @return SearchResultsInterface
+     */
+    public function getList(SearchCriteriaInterface $criteria);
 }
