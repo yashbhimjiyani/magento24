@@ -21,16 +21,7 @@ class Save extends \Magento\Framework\App\Action\Action
     }
     public function execute()
     {
-        // echo "<pre>";
-        // print_r(get_class_methods($this->candidateRepositoryInterface));
-        // exit;
-        // $candidateRepo=$this->candidateRepositoryInterface->create();
         $data = $this->getRequest()->getParams();
-        // $candidateRepo->setName($data['name']);
-        // $candidateRepo->setDob($data['dob']);
-        // $candidateRepo->setIsActive($data['is_active']);
-        // $candidateRepo->setIsIndianCitizen($data['is_indian_citizen']);
-        // var_dump($data);die();
         $candidateModel = $this->candidateFactory->create();
         $candidateModel->setName($data['name']);
         $candidateModel->setDob($data['dob']);
@@ -45,10 +36,6 @@ class Save extends \Magento\Framework\App\Action\Action
             $candidateModel->setIsIndianCitizen($data['is_indian_unchecked']);
         }
 
-        // $this->candidateInterface->setName($data['name']);
-        // $this->candidateInterface->setDob($data['dob']);
-        // $this->candidateInterface->setIsActive($data['is_active']);
-        // $this->candidateInterface->setIsIndianCitizen($data['is_indian_citizen']);
         try {
             $this->candidateRepositoryInterface->save($candidateModel);
             $this->messageManager->addSuccessMessage(__('You saved the data.'));

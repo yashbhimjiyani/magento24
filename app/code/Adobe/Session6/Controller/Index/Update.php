@@ -22,9 +22,6 @@ class Update extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $data = $this->getRequest()->getParams();
-        // echo "<pre>";
-        // print_r($data);
-        // exit;
         $candidateRepo=$this->candidateRepositoryInterface->getById($data['id']);
         $candidateRepo->setName($data['name']);
         $candidateRepo->setDob($data['dob']);
