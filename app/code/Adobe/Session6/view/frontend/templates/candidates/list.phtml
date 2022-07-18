@@ -1,0 +1,28 @@
+<div class="newrecord">
+    <a href="<?= $block->getBaseUrl() ?>candidates/index/form">Add New Candidate</a>
+</div>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Is Active?</th>
+        <th>Is Indian Citizen?</th>
+        <th>Actions</th>
+    </tr>
+    <?php
+    $candidates = $block->getCandidates();
+    foreach ($candidates as $candidate) {
+    ?>
+        <tr>
+            <td><?= $candidate->getId() ?></td>
+            <td><?= $candidate->getName() ?></td>
+            <td><?= $candidate->getDob() ?></td>
+            <td><?= $candidate->getIsActive() ? "Yes" : "No" ?></td>
+            <td><?= $candidate->getIsIndianCitizen() ? "Yes" : "No" ?></td>
+            <td><a href="<?= $block->getBaseUrl()?>/candidates/index/editform/id/<?= $candidate->getId() ?>">Edit</a></td>
+        </tr>
+    <?php
+    }
+    ?>
+</table>

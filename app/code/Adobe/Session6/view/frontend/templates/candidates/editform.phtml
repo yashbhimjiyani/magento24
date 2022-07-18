@@ -1,0 +1,40 @@
+<?php
+$data = $block->getFieldValues();
+?>
+<form action="<?= $block->getBaseUrl() ?>/candidates/index/update" method="post" id="candidate-edit-form" data-mage-init='{"validation": {"rules":{"name":{"required":true,"alphanumeric":true},"dob":{"required":true,"validate-date":true}}}}'>
+    <label for="name">Name:</label>
+    <input type="hidden" name="id" value="<?= $data->getId() ?>">
+    <input type="text" name="name" id="name" placeholder="Enter Your Name" value="<?= $data ? $data->getName() : "" ?>"><br><br>
+    <label for="email">Data Of Birth:</label>
+    <input type="date" name="dob" id="dob" value="<?= $data ? $data->getDob() : "" ?>"><br><br>
+    <?php if ($data && $data->getIsActive() == 1) {
+    ?>
+        <input type="checkbox" name="is_active" id="is_active" checked="checked">
+    <?php
+    } else {
+    ?>
+        <input type="checkbox" name="is_active" id="is_active">
+    <?php
+    } ?>
+    <label for="is_active">Active User?</label><br><br>
+    <?php if ($data && $data->getIsIndianCitizen() == 1) {
+    ?>
+        <input type="checkbox" name="is_indian" id="is_indian" checked="checked">
+    <?php
+    } else {
+    ?>
+        <input type="checkbox" name="is_indian" id="is_indian">
+    <?php
+    } ?>
+    <label for="is_indian">Indian Citizen?</label><br><br>
+    <input type="submit" value="Update" id="submit">
+    <input type="reset" value="Reset">
+</form>
+
+<script type="text/x-magento-init">
+    {
+        "#candidate-edit-form": {
+            "validation": {}
+        }
+    }
+</script>

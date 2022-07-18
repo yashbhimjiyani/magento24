@@ -1,0 +1,26 @@
+<?php
+?>
+<div class="listrecords">
+    <a href="<?= $block->getBaseUrl() ?>candidates/index/display">Show Candidates</a>
+</div>
+<form action="<?= $block->getBaseUrl() ?>candidates/index/save" method="post" id="candidate-new-form" data-mage-init='{"validation": {"rules":{"name":{"required":true,"alphanumeric":true,"min-words":1,"min_text_length":1},"dob":{"required":true,"validate-date":true}}}}'>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter Your Name"><br><br>
+    <label for="dob">Data Of Birth:</label>
+    <input type="date" name="dob" id="dob"><br><br>
+    <input type="checkbox" name="is_active" id="is_active" checked="checked">
+    <input type="hidden" name="is_active_unchecked" value="0">
+    <label for="is_active">Active User?</label><br><br>
+    <input type="checkbox" name="is_indian" id="is_indian" checked="checked">
+    <input type="hidden" name="is_indian_unchecked" value="0">
+    <label for="is_indian">Indian Citizen?</label><br><br>
+    <input type="submit" value="Add" id="submit">
+    <input type="reset" value="Reset">
+</form>
+<script type="text/x-magento-init">
+    {
+        "#candidate-new-form": {
+            "validation": {}
+        }
+    }
+</script>

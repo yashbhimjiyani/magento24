@@ -105,7 +105,20 @@ class CandidateRepository implements CandidateRepositoryInterface
         $searchResults->setItems($objects);
         return $searchResults;
     }
-
+    /**
+     * @inheritDoc
+     *
+     * @throws CouldNotSaveException
+     */
+    public function save(CandidateInterface $candidateInterface)
+    {
+        try {
+            $this->candidateResourceModel->save($candidateInterface);
+        } catch (\Exception $e) {
+            throw new CouldNotSaveException(__($e->getMessage()));
+        }
+        return $candidateInterface;
+    }
     /**
      * @inheritDoc
      */

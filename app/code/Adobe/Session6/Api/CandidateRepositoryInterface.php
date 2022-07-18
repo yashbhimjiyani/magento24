@@ -44,4 +44,10 @@ interface CandidateRepositoryInterface
      * @throws LocalizedException
      */
     public function getByIds($ids);
+
+    /**
+     * @param \Adobe\Session6\Api\Data\CandidateInterface $candidateInterface
+     * @return \Adobe\Session6\Api\Data\CandidateInterface
+     */
+    public function save(Data\CandidateInterface $candidateInterface);
 }
