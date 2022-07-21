@@ -12,16 +12,22 @@
     </tr>
     <?php
     $candidates = $block->getCandidates();
-    foreach ($candidates as $candidate) {
+    if (count($candidates) > 0) {
+        foreach ($candidates as $candidate) {
     ?>
-        <tr>
-            <td><?= $candidate->getId() ?></td>
-            <td><?= $candidate->getName() ?></td>
-            <td><?= $candidate->getDob() ?></td>
-            <td><?= $candidate->getIsActive() ? "Yes" : "No" ?></td>
-            <td><?= $candidate->getIsIndianCitizen() ? "Yes" : "No" ?></td>
-            <td><a href="<?= $block->getBaseUrl()?>/candidates/index/editform/id/<?= $candidate->getId() ?>">Edit</a></td>
-        </tr>
+            <tr>
+                <td><?= $candidate->getId() ?></td>
+                <td><?= $candidate->getName() ?></td>
+                <td><?= $candidate->getDob() ?></td>
+                <td><?= $candidate->getIsActive() ? "Yes" : "No" ?></td>
+                <td><?= $candidate->getIsIndianCitizen() ? "Yes" : "No" ?></td>
+                <td><a href="<?= $block->getBaseUrl() ?>/candidates/index/editform/id/<?= $candidate->getId() ?>">Edit</a></td>
+            </tr>
+        <?php
+        }
+    } else {
+        ?>
+        <tr>No Records Found!</tr>
     <?php
     }
     ?>
