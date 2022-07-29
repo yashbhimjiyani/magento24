@@ -1,0 +1,21 @@
+<div class="component-wrapper">
+    <div class="field">
+        <label class="label" for="firstNo"><span data-bind="i18n: 'Input First Number'"></span></label>
+        <div class="control">
+            <input name="firstNo" id="firstNo" type="number" class="input-number" data-bind="value: firstNo">
+        </div>
+        <label class="label" for="secondNo"><span data-bind="i18n: 'Input Second Number'"></span></label>
+        <div class="control">
+            <input name="secondNo" id="secondNo" type="number" class="input-number" data-bind="value: secondNo">
+        </div>
+    </div>
+    <div class="primary">
+        <button type="button" class="action action-login secondary" data-bind="click: addNumbers">
+            <span data-bind="i18n: 'Do Addition'"></span>
+        </button>
+    </div>
+
+    <div class="control">
+        <input type="number" name="sum" id="sum" data-bind="value:sum">
+    </div>
+</div>
