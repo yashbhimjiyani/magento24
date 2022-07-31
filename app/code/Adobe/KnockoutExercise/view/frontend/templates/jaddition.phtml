@@ -1,0 +1,39 @@
+<div class="component-wrapper">
+    <div class="field">
+        <label for="firstNo">
+            Input First Number
+        </label>
+        <div class="control">
+            <input name="firstNo" id="firstNo" type="number" class="input-number" value="0">
+        </div>
+        <label for="secondNo">
+            Input Second Number
+        </label>
+        <div class="control">
+            <input name="secondNo" id="secondNo" type="number" class="input-number" value="0">
+        </div>
+    </div>
+    <div class="primary">
+        <button type="button" id="addition">
+            <span>Add</span>
+        </button>
+    </div>
+
+    <label for="secondNo">
+        Output
+    </label>
+    <div class="control">
+        <input name="sum" id="sum" type="number" class="input-number" value="0">
+    </div>
+</div>
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $(document).ready(function() {
+            $('#addition').on('click', function() {
+                var firstNo = $('#firstNo').val();
+                var secondNo = $('#secondNo').val();
+                $('#sum').val(Number(firstNo) + Number(secondNo));
+            })
+        })
+    })
+</script>

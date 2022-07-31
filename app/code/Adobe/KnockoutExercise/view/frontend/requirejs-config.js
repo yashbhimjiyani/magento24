@@ -3,5 +3,10 @@ var config = {
         '*': {
             jaddition: 'Adobe_KnockoutExercise/js/jaddition.js'
         }
+    },
+    shim:{
+        'jaddition':{
+            deps:['jquery']
+        }
     }
 };
